@@ -1,6 +1,22 @@
 @media screen and (max-width: 1000px)
   .start div
     grid-template-columns: 1fr !important
+  .portfolio div
+    grid-template-columns: minmax(300px, 1fr) !important
+  .title
+    font-size: 4em !important
+@media screen and (max-width: 400px)
+  header, footer
+    margin: 0 1em !important
+  main
+    padding: 5em 1em !important
+    gap: 5em !important
+  .title
+    font-size: 3em !important
+  .about
+    font-size: 1em !important
+  .contact
+    font-size: 2em !important
 body
   font-family: Ubuntu, 'Fira Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   margin: 0
@@ -20,6 +36,9 @@ header
   align-items: center
   justify-content: space-between
   gap: 2em
+  flex-wrap: wrap
+  h1
+    margin: 0
   nav
     display: flex
     flex-wrap: wrap
@@ -73,7 +92,7 @@ section
   display: flex
   justify-content: center
   align-items: center
-p.title
+.title
   font-size: 6em
   color: #717171
   font-weight: bold
@@ -123,21 +142,20 @@ p.title
 .about
   font-size: 1.5em
   line-height: 1.5em
-.portfolio
-  div
-    display: grid
-    grid-template-columns: repeat(2, minmax(300px, 1fr))
+.portfolio div
+  display: grid
+  grid-template-columns: repeat(2, minmax(300px, 1fr))
+  gap: 1em
+  a, div
+    text-decoration: none
+    display: flex
+    align-items: center
     gap: 1em
-    a, div
-      text-decoration: none
-      display: flex
-      align-items: center
-      gap: 1em
-      background: rgba(255, 255, 255, 0.1)
-      padding: 1em
-      border-radius: 1em
-      img
-        width: 50px
+    background: rgba(255, 255, 255, 0.1)
+    padding: 1em
+    border-radius: 1em
+    img
+      width: 50px
 .contact
   font-size: 3em
   text-align: center

@@ -2,6 +2,36 @@
   .start div {
     grid-template-columns: 1fr !important;
   }
+
+  .portfolio div {
+    grid-template-columns: minmax(300px, 1fr) !important;
+  }
+
+  .title {
+    font-size: 4em !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  header, footer {
+    margin: 0 1em !important;
+  }
+
+  main {
+    padding: 5em 1em !important;
+    gap: 5em !important;
+  }
+
+  .title {
+    font-size: 3em !important;
+  }
+
+  .about {
+    font-size: 1em !important;
+  }
+
+  .contact {
+    font-size: 2em !important;
+  }
 }
 body {
   font-family: Ubuntu, "Fira Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -26,6 +56,10 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 2em;
+  flex-wrap: wrap;
+}
+header h1 {
+  margin: 0;
 }
 header nav {
   display: flex;
@@ -99,7 +133,7 @@ section a {
   align-items: center;
 }
 
-p.title {
+.title {
   font-size: 6em;
   color: #717171;
   font-weight: bold;
