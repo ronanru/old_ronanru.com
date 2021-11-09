@@ -1,0 +1,204 @@
+@media screen and (max-width: 1000px) {
+  .start div {
+    grid-template-columns: 1fr !important;
+  }
+}
+body {
+  font-family: Ubuntu, "Fira Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #181818;
+  color: white;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+header {
+  border-radius: 0 0 2em 2em;
+  margin: 0 4em;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+header a {
+  color: white;
+  font-size: 1.1em;
+  background: transparent;
+  border: none;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  text-decoration: none;
+}
+header a::before, header a::after {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+header a:hover::before, header a:hover::after {
+  opacity: 1;
+}
+header a::before {
+  content: "<";
+}
+header a::after {
+  content: "/>";
+}
+
+footer {
+  border-radius: 2em 2em 0 0;
+  margin: 0 4em;
+  padding: 1em 2em;
+  text-align: center;
+  color: #717171;
+}
+footer a {
+  color: #717171;
+}
+
+main {
+  flex: 1;
+  padding: 10em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+}
+
+section {
+  position: relative;
+  scroll-snap-align: center;
+  opacity: 0.5;
+  filter: blur(2.5px);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+section a {
+  color: white;
+}
+
+.focus {
+  opacity: 1;
+  filter: unset;
+}
+
+.content {
+  padding: 2rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(2.5px);
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p.title {
+  font-size: 6em;
+  color: #717171;
+  font-weight: bold;
+  position: absolute;
+  top: -1.7em;
+  left: -0.3em;
+  z-index: -1;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+}
+
+.content, header, footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.start div {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) 1fr;
+  gap: 2em;
+}
+.start div .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.start div h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.start div p {
+  font-size: 2em;
+  margin: 0;
+}
+.start div img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 25%;
+  margin: 0 auto;
+}
+.start div nav {
+  display: flex;
+}
+.start div a {
+  display: block;
+  font-size: 1.2em;
+  padding: 1em;
+}
+.start div a:first-of-type {
+  border-radius: 1rem;
+  border: none;
+  background: #0047b3;
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+}
+.start div a:first-of-type:hover {
+  background: #0060f0;
+}
+.start div a:last-of-type {
+  border: none;
+  background: transparent;
+}
+
+.about {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.portfolio div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 1em;
+}
+.portfolio div a, .portfolio div div {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  border-radius: 1em;
+}
+.portfolio div a img, .portfolio div div img {
+  width: 50px;
+}
+
+.contact {
+  font-size: 3em;
+  text-align: center;
+}
+.contact div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact a {
+  text-decoration: none;
+  transition: font-weight 0.25s ease;
+}
+.contact a:hover {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
