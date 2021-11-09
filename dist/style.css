@@ -4,11 +4,28 @@
   }
 
   .portfolio div {
-    grid-template-columns: minmax(300px, 1fr) !important;
+    grid-template-columns: 1fr !important;
   }
 
   .title {
     font-size: 4em !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .start {
+    font-size: 0.8em;
+  }
+  .start img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .about {
+    font-size: 1em !important;
+  }
+
+  .contact {
+    font-size: 2em !important;
   }
 }
 @media screen and (max-width: 400px) {
@@ -23,14 +40,6 @@
 
   .title {
     font-size: 3em !important;
-  }
-
-  .about {
-    font-size: 1em !important;
-  }
-
-  .contact {
-    font-size: 2em !important;
   }
 }
 body {
@@ -93,10 +102,10 @@ footer {
   margin: 0 4em;
   padding: 1em 2em;
   text-align: center;
-  color: #717171;
+  color: #bdbdbd;
 }
 footer a {
-  color: #717171;
+  color: #bdbdbd;
 }
 
 main {
@@ -135,7 +144,7 @@ section a {
 
 .title {
   font-size: 6em;
-  color: #717171;
+  color: #828282;
   font-weight: bold;
   position: absolute;
   top: -1.7em;
@@ -167,8 +176,8 @@ section a {
   margin: 0;
 }
 .start div img {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
+  height: 300px;
   border-radius: 25%;
   margin: 0 auto;
 }
@@ -216,6 +225,7 @@ section a {
 }
 .portfolio div a img, .portfolio div div img {
   width: 50px;
+  height: 50px;
 }
 
 .contact {
