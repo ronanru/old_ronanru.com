@@ -202,10 +202,6 @@ section a {
 .start div a:first-of-type:hover {
   background: #0060f0;
 }
-.start div a:last-of-type {
-  border: none;
-  background: transparent;
-}
 
 .about {
   font-size: 1.5em;
