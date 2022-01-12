@@ -1,1 +1,1 @@
-RonanRU.dev is my personal website.
+RonanRU.com is my personal website.
