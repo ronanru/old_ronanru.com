@@ -75,7 +75,7 @@ main {
 .links a:hover {
   transform: scale(1.1) rotate(5deg);
 }
-.links a:focus {
+.links a:focus-visible {
   outline-offset: 0.5em;
   outline-color: white;
   outline-style: dashed;
