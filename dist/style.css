@@ -1,247 +1,109 @@
-@media screen and (max-width: 1000px) {
-  .start div {
-    grid-template-columns: 1fr !important;
-  }
-
-  .portfolio div {
-    grid-template-columns: 1fr !important;
-  }
-
-  .title {
-    font-size: 4em !important;
-  }
+@charset "UTF-8";
+@font-face {
+  font-family: "Schoolbell";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/schoolbell/v11/92zQtBZWOrcgoe-fgnJIZxUa6w.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-@media screen and (max-width: 600px) {
-  .start {
-    font-size: 0.8em;
-  }
-  .start img {
-    width: 150px !important;
-    height: 150px !important;
-  }
-
-  .about {
-    font-size: 1em !important;
-  }
-
-  .contact {
-    font-size: 2em !important;
-  }
-}
-@media screen and (max-width: 400px) {
-  header, footer {
-    margin: 0 1em !important;
-  }
-
+@media screen and (min-width: 1000px) {
   main {
-    padding: 5em 1em !important;
-    gap: 5em !important;
-  }
-
-  .title {
-    font-size: 3em !important;
+    grid-template-columns: 2fr 1fr;
+    width: min(1100px, 100vw - 5em);
+    height: min(900px, 100vh - 5em);
   }
 }
 body {
-  font-family: Ubuntu, "Fira Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background: #181818;
   color: white;
-  max-width: 1200px;
-}
-
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-header {
-  border-radius: 0 0 2em 2em;
-  margin: 0 4em;
-  padding: 1em 2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2em;
-  flex-wrap: wrap;
-  scroll-snap-align: start;
-}
-header h1 {
+  display: grid;
+  place-items: center;
   margin: 0;
-}
-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-header a {
-  color: white;
-  font-size: 1.1em;
-  background: transparent;
-  border: none;
-  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
-  text-decoration: none;
-}
-header a::before, header a::after {
-  opacity: 0.5;
-  transition: opacity 0.5s ease;
-}
-header a:hover::before, header a:hover::after {
-  opacity: 1;
-}
-header a::before {
-  content: "<";
-}
-header a::after {
-  content: "/>";
+  font-size: 20px;
+  min-height: 100vh;
 }
 
-footer {
-  border-radius: 2em 2em 0 0;
-  margin: 0 4em;
-  padding: 1em 2em;
-  text-align: center;
-  color: #bdbdbd;
-  scroll-snap-align: end;
-}
-footer a {
-  color: #bdbdbd;
+::selection {
+  background-color: #18181880;
 }
 
 main {
-  flex: 1;
-  padding: 10em 4em;
+  display: grid;
+  gap: 2em;
+  padding: 2em;
+}
+
+.info, .links a {
+  background: #ffffff1a;
+  padding: 3rem;
+  border-radius: 4rem;
+}
+
+.info {
+  grid-template-columns: 1fr;
   display: flex;
   flex-direction: column;
-  gap: 10em;
+  gap: 1em;
+}
+.info img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  align-self: center;
+  border-radius: 3em;
+  border: 3px solid #00000080;
+}
+.info p, .info h1 {
+  margin: 0;
 }
 
-section {
-  position: relative;
-  scroll-snap-align: center;
-  opacity: 0.5;
-  filter: blur(2.5px);
-  transition: opacity 0.25s ease, filter 0.25s ease;
-}
-section a {
-  color: white;
-}
-
-.focus {
-  opacity: 1;
-  filter: unset;
-}
-
-.content {
-  padding: 2rem;
-  border-radius: 3rem;
-  backdrop-filter: blur(2.5px);
-  min-height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-size: 6em;
-  color: #828282;
-  font-weight: bold;
-  position: absolute;
-  top: -1.7em;
-  left: -0.3em;
-  z-index: -1;
-  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
-}
-
-.content, header, footer {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.start div {
+.links {
   display: grid;
-  grid-template-columns: minmax(0, 300px) 1fr;
   gap: 2em;
 }
-.start div .info {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.start div h1 {
-  font-size: 3em;
-  margin: 0;
-}
-.start div p {
-  font-size: 2em;
-  margin: 0;
-}
-.start div img {
-  width: 300px;
-  height: 300px;
-  border-radius: 25%;
-  margin: 0 auto;
-}
-.start div nav {
-  display: flex;
-}
-.start div a {
-  display: block;
-  font-size: 1.2em;
-  padding: 1em;
-}
-.start div a:first-of-type {
-  border-radius: 1rem;
-  border: none;
-  background: #0047b3;
-  transition: background-color 0.5s ease;
-  text-decoration: none;
-}
-.start div a:first-of-type:hover {
-  background: #0060f0;
-}
-
-.about {
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
-.portfolio div {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: 1em;
-}
-.portfolio div a, .portfolio div div {
-  text-decoration: none;
+.links a {
+  color: white;
   display: flex;
   align-items: center;
   gap: 1em;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1em;
-  border-radius: 1em;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: transform 0.25s ease;
 }
-.portfolio div a img, .portfolio div div img {
-  width: 50px;
-  height: 50px;
+.links a:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+.links a:focus {
+  outline-offset: 0.5em;
+  outline-color: white;
+  outline-style: dashed;
+  outline-width: 3px;
+}
+.links svg {
+  width: 3em;
+  height: 3em;
 }
 
-.contact {
-  font-size: 3em;
-  text-align: center;
+span {
+  font-family: "Schoolbell", cursive;
+  font-size: 1.2em;
+  padding: 2px 0.2em;
+  color: #ff1d61;
+  text-decoration: underline;
+  text-decoration-color: white;
 }
-.contact div {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+span::before, span::after {
+  content: " ‎ ";
 }
-.contact a {
-  text-decoration: none;
-  transition: font-weight 0.25s ease;
+
+h1 {
+  font-size: 2.5rem;
 }
-.contact a:hover {
-  font-weight: bold;
+
+p {
+  color: #e2e2e2;
 }
 
 /*# sourceMappingURL=style.css.map */

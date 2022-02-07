@@ -5,8 +5,8 @@
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "semi": true,
-  "printWidth": 120,
+  "printWidth": 100,
   "trailingComma": "none",
   "endOfLine": "lf",
-  "svelteBracketNewLine": false
+  "bracketSameLine": true
 }
